@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(231, 231, 231);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins, sans-serif;
+}
+
+h1{
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: blue;
+}
+
+.container {
+  background-color: rgb(201, 201, 201);
+  height: max-content;
+  width: 80%;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.barContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+
+button {
+  border: none;
+  outline: 1px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.2rem;
+  font-size: 12px;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: 0.1s ease;
+  font-weight: 400;
+  background-color: rgb(140, 140, 226);
+  color: #fff;
+  transition: .4s ease;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor : not-allowed;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 0%;
+  background-color: blue;
+  z-index: 1;
+  transition: 1s ease;
+}
+.barContainer:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: rgb(143, 143, 143);
+}
+
+.circle {
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: .4s ease-in-out;
+}
+
+.circle.active {
+  border-color: blue;
+}
